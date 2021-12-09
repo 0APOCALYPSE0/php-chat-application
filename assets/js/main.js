@@ -56,6 +56,7 @@ if(continueBtn !== null){
       if(xhr.readyState === XMLHttpRequest.DONE){
         if(xhr.status === 200){
           let data = xhr.response;
+          console.log(data);
           if(data === 'success'){
             location.href = 'users.php';
           }else{

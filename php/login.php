@@ -13,7 +13,7 @@
       if(mysqli_num_rows($sql) > 0){
         $row = mysqli_fetch_assoc($sql);
         $status = "Active Now";
-        $sql2 = mysqli_query($conn, "UPDATE users SET status = {$status} WHERE unique_id = {$row['unique_id']}");
+        $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
         if($sql2){
           $_SESSION['unique_id'] = $row['unique_id']; // using this session we have used user unique_id in other php files
           echo 'success';
